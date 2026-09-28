@@ -1,0 +1,1 @@
+# logbook/members/bob
