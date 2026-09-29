@@ -19,7 +19,7 @@ Git 无法合并 Word 文档或多个人同时编辑的 Markdown。**必须一�
 
 ### 🚨 特别提醒（外方课要求）：必须使用英文
 *   **Logbook 内容**：必须用英文写，不要写中文。
-*   **Git 提交信息（commit message）**：**必须用英文**，不要写中文。比如写成 `git commit -m "log: update weekly log"`。
+*   **Git 提交信息（commit message）**：**必须用英文**。
 *   **提案内容**：最终交给老师的提案必须是全英文。
 
 ---
@@ -35,20 +35,16 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-**（每天工作流程）**：请**只复制运行自己名字对应的命令块**，不要运行别人的。
+**（每天工作流程）**：请**只复制运行自己名字对应的命令块**。
 
 ### 🔴 队长 xuhancheng 专属命令：
 ```bash
-# 1. 同步最新代码
 git checkout main
 git pull origin main
-
-# 2. 新建自己的分支
 git checkout -b log/xuhancheng-2026-09
 
-# 3. 在电脑上修改 logbook/members/xuhancheng/2026-09.md（内容必须用英文写，日期请改成现在的年、月）
+# 修改你的日志和提案文件（见第三部分格式）
 
-# 4. 提交并推送（提交信息必须是英文）
 git add .
 git commit -m "log: xuhancheng weekly update"
 git push -u origin log/xuhancheng-2026-09
@@ -56,16 +52,12 @@ git push -u origin log/xuhancheng-2026-09
 
 ### 🟢 队友 chizijun 专属命令：
 ```bash
-# 1. 同步最新代码
 git checkout main
 git pull origin main
-
-# 2. 新建自己的分支
 git checkout -b log/chizijun-2026-09
 
-# 3. 在电脑上修改 logbook/members/chizijun/2026-09.md（内容必须用英文写，日期请改成现在的年、月）
+# 修改你的日志和提案文件（见第三部分格式）
 
-# 4. 提交并推送（提交信息必须是英文）
 git add .
 git commit -m "log: chizijun weekly update"
 git push -u origin log/chizijun-2026-09
@@ -73,16 +65,12 @@ git push -u origin log/chizijun-2026-09
 
 ### 🔵 队友 yeborui 专属命令：
 ```bash
-# 1. 同步最新代码
 git checkout main
 git pull origin main
-
-# 2. 新建自己的分支
 git checkout -b log/yeborui-2026-09
 
-# 3. 在电脑上修改 logbook/members/yeborui/2026-09.md（内容必须用英文写，日期请改成现在的年、月）
+# 修改你的日志和提案文件（见第三部分格式）
 
-# 4. 提交并推送（提交信息必须是英文）
 git add .
 git commit -m "log: yeborui weekly update"
 git push -u origin log/yeborui-2026-09
@@ -90,40 +78,78 @@ git push -u origin log/yeborui-2026-09
 
 ### 🟣 队友 wuruiyang 专属命令：
 ```bash
-# 1. 同步最新代码
 git checkout main
 git pull origin main
-
-# 2. 新建自己的分支
 git checkout -b log/wuruiyang-2026-09
 
-# 3. 在电脑上修改 logbook/members/wuruiyang/2026-09.md（内容必须用英文写，日期请改成现在的年、月）
+# 修改你的日志和提案文件（见第三部分格式）
 
-# 4. 提交并推送（提交信息必须是英文）
 git add .
 git commit -m "log: wuruiyang weekly update"
 git push -u origin log/wuruiyang-2026-09
 ```
 
 **（全员推送后的动作）**：推送成功后，立刻去 GitHub 网页端：
-1. 点页面顶部的黄色提示条 **Compare & pull request**。
+1. 点 **Compare & pull request**。
 2. 确认 `base` 是 `main`，`compare` 是你刚推的分支。
 3. 点击 **Create pull request**。
-4. 在群里 @ 队长（xuhancheng），告诉他你提交了 PR，等待他合并。
+4. 在群里 @ 队长，等待他合并。
 
 ---
 
-## 👑 第三部分：队长合并 PR 的标准步骤
+## 📝 第三部分：Logbook（工作日志）规范与格式（重点！）
+
+**Logbook 是老师检查你们工作量、工时和产出物的重要证据。** 每个队员必须单独建自己的 Logbook 文件，不能共用。
+
+### 1. 日志放在哪里？
+统一放在：`logbook/members/你的名字/2026-09.md`（月份可以随时间推移新建，比如 `2026-10.md`）。
+**不要每次都新建文件，同一个月的日志写在同一个文件里。**
+
+### 2. 日志的标准格式（直接用这个模板）
+请打开你的 `2026-09.md`，每次工作后，在最上方（或最下方）追加下面的英文结构：
+
+```markdown
+## YYYY-MM-DD
+
+- **Task**: Briefly describe what you did today (e.g., "Drafted the Scope section of the proposal").
+- **Time spent**: X hours.
+- **Artifacts produced**: 
+  - [Link to your proposal file] (e.g., `project-proposal/04-objectives-scope.md`)
+  - [Link to your research notes] (e.g., `docs/01-research-upskilling/notes/2026-09-29-topic.md`)
+- **Blockers**: Any issues you met (or write "None").
+```
+
+### 3. 场景模拟：我上线了，改了提案，写了日志，该怎么做？
+假设你是 `xuhancheng`，今天上线工作，做了两件事：**修改了提案里的 `04-objectives-scope.md` 文件**，同时**记录了今天的工作日志**。
+
+**你的操作步骤：**
+1. 按照“🔴 队长 xuhancheng 专属命令”建好分支。
+2. 在电脑上修改 `project-proposal/04-objectives-scope.md`（写入你的提案内容）。
+3. 在电脑上打开 `logbook/members/xuhancheng/2026-09.md`，按照上面的模板追加一条今天的工作记录。**注意：日志里要附上你刚才修改的提案文件的链接（相对路径）。**
+4. 把这两个文件一起提交：
+   ```bash
+   git add .
+   git commit -m "log: add xuhancheng weekly log; proposal: update scope section"
+   git push -u origin log/xuhancheng-2026-09
+   ```
+5. 去网页开 PR，等待队长合并。
+
+### 4. 日志提交的频率
+**每天工作完就写（或者至少每周写 2-3 次）。** 不要拖到 Week 12 再去补，老师看的是实时记录，补的记录一眼就能看出来。
+
+---
+
+## 👑 第四部分：队长合并 PR 的标准步骤
 
 队友提交了 PR 后，队长打开 GitHub 的 **Pull requests** 标签：
 
 1. 点进队友的 PR。
-2. 点击 **Files changed**，检查他是不是只改了自己 `logbook/members/名字/` 下的文件。
+2. 点击 **Files changed**，检查他是不是只改了自己负责的文件（`logbook/members/名字/` 和对应提案章节）。
    * ⚠️ **如果发现他动了 `index.html` 或别人的文件，立刻在 PR 里留言让他改，不要点合并！**
 3. 确认无误，点击页面底部的 **Squash and merge**。
-4. 在弹出的框中点击 **Confirm squash and merge**。
-5. 合并成功后，点击 **Delete branch** 删掉这个临时分支。
-6. 此时，队友的修改正式进入 `main` 分支，GitHub Actions 会自动重新生成 `index.html`。
+4. 点击 **Confirm squash and merge**。
+5. 点击 **Delete branch** 删掉临时分支。
+6. 队友的修改正式进入 `main` 分支，GitHub Actions 会自动重新生成 `index.html`。
 
 **队长每天合并完队友的 PR 后，在自己电脑上执行：**
 ```bash
@@ -133,42 +159,39 @@ git pull origin main
 
 ---
 
-## ⚠️ 第四部分：常见报错与解决
+## ⚠️ 第五部分：常见报错与解决
 
 ### 1. `git push` 被拒绝（rejected - fetch first）？
-**原因**：你在本地工作的时候，机器人（或者队友）已经更新了远程仓库，你的本地版本落后了。
-**解决**：直接在 Git Bash 执行：
+**原因**：你在本地工作时，远程仓库已被更新。
+**解决**：
 ```bash
 git pull --rebase origin main
 git push origin main  # 或者你的分支名
 ```
-*   `--rebase` 会把你的修改“垫”在最新代码之上，避免产生多余的合并记录。
 
 ### 2. 遇到文件冲突（CONFLICT）？
-如果 `git pull` 之后提示冲突，通常是因为你手动改了 `index.html`。直接执行：
+如果 `git pull` 提示冲突，通常是因为你手动改了 `index.html`。执行：
 ```bash
 git checkout --theirs index.html
 git add index.html
 git rebase --continue
 ```
-*   `--theirs` 表示放弃你的修改，直接使用远程版本。如果是你负责的 `.md` 文件冲突了，立刻在群里求助队长，不要乱删代码。
+如果是你负责的 `.md` 文件冲突了，立刻在群里求助队长。
 
 ### 3. 误操作把文件删了或者改坏了？
-不要慌，只要还没 `git commit`，执行：
+只要还没 `git commit`，执行：
 ```bash
 git checkout -- 文件名
 ```
-即可恢复到修改前的状态。
 
 ---
 
-## 📝 第五部分：格式转换（如何把 MD 变成 Word/PDF）
+## 📝 第六部分：格式转换（如何把 MD 变成 Word/PDF）
 
-Markdown (`.md`) 适合协作和版本控制，但最终提交给老师可能需要 Word 或 PDF。
+最终提交给老师可能需要 Word 或 PDF。
 
-*   **方法一（最推荐，VS Code 插件）**：安装 `Markdown PDF` 插件，打开 `.md` 文件，按 `Ctrl+Shift+P`，输入 `Markdown PDF: Export (pdf)`。
-*   **方法二（在线转换，最快）**：打开 [CloudConvert](https://cloudconvert.com/md-to-docx) 或 [Dillinger](https://dillinger.io/)，上传 `.md`，选择输出为 `.docx` 或 `.pdf`。
-*   **方法三（Pandoc，最强大）**：安装 Pandoc 后，在终端运行 `pandoc proposal.md -o proposal.docx` 生成 Word。
+*   **VS Code 插件（最推荐）**：安装 `Markdown PDF`，打开 `.md`，按 `Ctrl+Shift+P`，输入 `Markdown PDF: Export (pdf)`。
+*   **在线转换（最快）**：使用 [CloudConvert](https://cloudconvert.com/md-to-docx) 或 [Dillinger](https://dillinger.io/)。
 *   **最佳团队操作流程**：
     1. 队友各自写 `.md` 草稿。
     2. 由一名负责人汇总到 Word 里统一排版。
@@ -179,7 +202,7 @@ Markdown (`.md`) 适合协作和版本控制，但最终提交给老师可能需
 
 ---
 
-## ✅ 第六部分：每日开工前检查清单
+## ✅ 第七部分：每日开工前检查清单
 - [ ] 执行过 `git checkout main && git pull origin main`
 - [ ] 创建了自己的独立分支（不是 main）
 - [ ] 没有手动修改 `index.html`
